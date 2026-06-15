@@ -3,11 +3,8 @@ plugins {
     id "maven-publish"
 }
 
-version = project.findProperty("version") ?: mod_version
-group = project.findProperty("group") ?: mod_group
-
 base {
-    archivesName = mod_name
+    archivesName = name
 }
 
 dependencies {
@@ -21,10 +18,10 @@ dependencies {
 processResources {
     filesMatching("fabric.mod.json") {
         expand(
-                "mod_id": mod_id,
-                "mod_name": mod_name,
-                "mod_version": mod_version,
-                "mod_license": mod_license,
+                "id": id,
+                "name": name,
+                "version": version,
+                "license": license,
                 "loader_version": loader_version,
                 "minecraft_version": minecraft_version
         )
@@ -41,4 +38,13 @@ compileJava {
 
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+publishing {
+    publications {
+        create("maven", MavenPublication) {
+            //noinspection GroovyAssignabilityCheck
+            from components.java
+        }
+    }
 }
