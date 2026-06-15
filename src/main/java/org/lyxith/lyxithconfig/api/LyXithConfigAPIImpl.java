@@ -7,8 +7,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static org.lyxith.lyxithconfig.LyxithConfig.configPath;
-import static org.lyxith.lyxithconfig.LyxithConfig.logger;
+import static org.lyxith.lyxithconfig.LyXithConfig.configPath;
+import static org.lyxith.lyxithconfig.LyXithConfig.logger;
 public class LyXithConfigAPIImpl implements LyXithConfigAPI{
     private final Map<String, LyXithConfigNode> configs = new ConcurrentHashMap<>();
 

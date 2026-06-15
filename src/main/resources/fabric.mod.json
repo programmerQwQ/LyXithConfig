@@ -7,7 +7,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "org.lyxith.lyxithconfig.LyxithConfig"
+      "org.lyxith.lyxithconfig.LyXithConfig"
     ],
     "preLaunch": [
       "org.lyxith.lyxithconfig.LyXithConfigEntryPoint"

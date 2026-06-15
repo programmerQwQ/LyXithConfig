@@ -8,7 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.logging.Logger;
 
-public class LyxithConfig implements ModInitializer {
+public class LyXithConfig implements ModInitializer {
     public static final String modId = "LyXithConfig";
     public static final Logger logger = Logger.getLogger(modId);
     private static final Path minecraftPath = FabricLoader.getInstance().getGameDir();
