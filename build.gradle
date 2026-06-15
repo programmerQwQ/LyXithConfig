@@ -41,10 +41,5 @@ java {
 }
 
 publishing {
-    publications {
-        create("maven", MavenPublication) {
-            //noinspection GroovyAssignabilityCheck
-            from components.java
-        }
-    }
+    publications.create("maven", MavenPublication) from components.java
 }
