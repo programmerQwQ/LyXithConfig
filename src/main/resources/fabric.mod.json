@@ -1,13 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "lyxithconfig",
-  "version": "${version}",
-  "name": "LyXithConfig",
-  "description": "",
-  "authors": [],
-  "contact": {},
-  "license": "All-Rights-Reserved",
-  "icon": "assets/lyxithconfig/icon.png",
+  "id": "${mod_id}",
+  "name": "${mod_name}",
+  "version": "${mod_version}",
+  "license": "${mod_license}",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -28,7 +24,7 @@
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-    "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "~${minecraft_version}",
+    "fabric": "*"
   }
 }
