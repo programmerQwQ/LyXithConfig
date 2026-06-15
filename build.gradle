@@ -27,6 +27,10 @@ processResources {
     }
 }
 
+jar {
+    from("LICENSE")
+}
+
 compileJava {
     options.release = 21
 }
