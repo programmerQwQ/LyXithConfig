@@ -3,8 +3,12 @@ plugins {
     id "maven-publish"
 }
 
-version = mod_version
-group = mod_group
+version = project.findProperty("version") ?: mod_version
+group = project.findProperty("group") ?: mod_group
+
+base {
+    archivesName = mod_name
+}
 
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
