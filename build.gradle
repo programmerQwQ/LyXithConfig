@@ -4,7 +4,7 @@ plugins {
 }
 
 base {
-    archivesName = name
+    archivesName = mod_name
 }
 
 dependencies {
@@ -18,10 +18,10 @@ dependencies {
 processResources {
     filesMatching("fabric.mod.json") {
         expand(
-                "id": id,
-                "name": name,
-                "version": version,
-                "license": license,
+                "mod_id": mod_id,
+                "mod_name": mod_name,
+                "mod_version": mod_version,
+                "mod_license": mod_license,
                 "loader_version": loader_version,
                 "minecraft_version": minecraft_version
         )
