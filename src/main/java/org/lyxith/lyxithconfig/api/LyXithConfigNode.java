@@ -1,5 +1,6 @@
 package org.lyxith.lyxithconfig.api;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface LyXithConfigNode {
@@ -39,6 +40,10 @@ public interface LyXithConfigNode {
         return getValue(Double.class);
     }
 
+    default Optional<List> getList() {
+        return getValue(List.class);
+    }
+
     default void set(String value) {
         setValue(value);
     }
@@ -52,6 +57,10 @@ public interface LyXithConfigNode {
     }
 
     default void set(double value) {
+        setValue(value);
+    }
+
+    default void set(List value) {
         setValue(value);
     }
 
