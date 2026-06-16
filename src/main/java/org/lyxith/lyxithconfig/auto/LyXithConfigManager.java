@@ -9,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 
+@SuppressWarnings("unused")
 public class LyXithConfigManager {
     private static final Object LOCK = new Object();
     private static final Gson GSON = new GsonBuilder()
